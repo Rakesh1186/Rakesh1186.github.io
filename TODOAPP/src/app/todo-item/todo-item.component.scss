@@ -1,0 +1,81 @@
+
+
+
+
+.todo-item{
+    display: flex;
+    flex-direction: row;
+    padding: 35px 15px;
+    position: relative;
+     
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    font-size: 18px;
+    &.completed {
+        color: #aaa;
+    }
+}
+.todo-item .check-box{
+    border: 2px solid #eee;
+    border-radius: 50%;
+     
+    height: 28px;
+    width: 28px;
+    margin-right: 20px;
+
+
+    i.material-icons{
+        font-size: 20px;
+        margin: auto;
+        color: black;
+        //hide by default
+        opacity: 0;
+        visibility: hidden;
+    }
+   
+}
+.todo-item:hover .check-box{
+    background: #eee;
+    i.material-icons{opacity: 1;}
+    
+
+}
+.todo-item.completed .check-box{
+    background: rgb(11, 223, 170);
+    i.material-icons{
+        opacity: 1;
+        
+    }
+}
+
+.todo-item .todo-controls-box {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    display: flex;
+
+    opacity: 0;
+    visibility: hidden;
+}
+.todo-item:hover .todo-controls-box{
+    opacity: 1;
+    visibility: visible;
+}
+
+.todo-controls-box .todo-controls-button{
+    display: flex;
+    background: #eee;
+    padding: 7px 10px;
+
+    i.material-icons{
+        font-size: 20px;
+
+    }
+    &:hover{
+        background: red;
+    }
+
+    
+
+    
+}
